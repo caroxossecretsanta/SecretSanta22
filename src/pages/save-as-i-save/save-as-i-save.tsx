@@ -15,7 +15,7 @@ function SaveAsISave(props: SaveAsISaveProps) {
     <div>
       <ImageHeader path={props.imgPath} />
       <Video path={props.vidPath} width="800px" height="500px" />
-      <Hint path="assets/hint.png" />
+      <Hint path="https://media.discordapp.net/attachments/825881406017241178/1052735595601997924/hint.png" />
     </div>
   );
 }

@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <SaveAsISave
-      imgPath="assets/c2VlIGFzIGkgc2Vl.png"
+      imgPath="https://media.discordapp.net/attachments/825881406017241178/1052735396150247504/c2VlIGFzIGkgc2Vl.png"
       vidPath="https://www.youtube.com/watch?v=oHASvG5amh8"
       width="800px"
       height="500px"
