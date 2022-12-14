@@ -15,7 +15,7 @@ function SaveAsISave(props: SaveAsISaveProps) {
     <div>
       <ImageHeader path={props.imgPath} />
       <Video path={props.vidPath} width="800px" height="500px" />
-      <Hint path="/assets/hint.png" />
+      <Hint path="assets/hint.png" />
     </div>
   );
 }

@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <SaveAsISave
-      imgPath="/assets/c2VlIGFzIGkgc2Vl.png"
+      imgPath="assets/c2VlIGFzIGkgc2Vl.png"
       vidPath="https://www.youtube.com/watch?v=oHASvG5amh8"
       width="800px"
       height="500px"
