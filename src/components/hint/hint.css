@@ -1,0 +1,41 @@
+.hover-zoom {
+  padding-top: 30px;
+  width: 150px;
+  height: 100px;
+  overflow: visible;
+  margin: 0 auto;
+}
+  
+.hover-zoom img {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+  
+.hover-zoom:hover img {
+    transform: scale(1.25);
+}
+
+.fade-in-text {
+    color: red;
+    animation: fadeIn 1s;
+    font-family: 'Courier New', monospace;
+    white-space: pre-line;
+    text-align: center;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.fade-out-text {
+    color: red;
+    animation: fadeOut 1s;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+  }
+
+  @keyframes fadeOut {
+    100% {opacity: 1; } 
+    0% {opacity: 0; }
+  } 

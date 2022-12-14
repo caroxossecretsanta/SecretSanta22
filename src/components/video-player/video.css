@@ -1,0 +1,11 @@
+.Video {
+  padding-top: 75px;
+  text-align: center;
+}
+
+.player-wrapper {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
