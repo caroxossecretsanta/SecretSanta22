@@ -18,7 +18,7 @@ You will also see any lint errors in the console.
 
 Fuck a test
 
-### `npm deploy`
+### `npm run deploy`
 
 Publishes page on GitHub pages.
 
