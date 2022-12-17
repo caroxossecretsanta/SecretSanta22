@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 
 import './hint.css';
 
-interface ImageButtonProps {
-  path: string;
+interface HintProps {
+  imagePath: string;
+  hintText: string;
 }
 
 let currentStyle = 'fade-in-text';
-function ImageButton(props: ImageButtonProps) {
+function ImageButton(props: HintProps) {
   const [clicked, setClicked] = useState(false);
   const handleClick = (event: any) => {
     setClicked(!clicked);
@@ -18,12 +19,12 @@ function ImageButton(props: ImageButtonProps) {
   return (
     <div className="hover-zoom">
       <img
-        src={props.path}
+        src={props.imagePath}
         alt="hii"
         className="hover-zoom"
         onClick={handleClick}
       />
-      {clicked && <p className={currentStyle}>Save Image As Google B64 </p>}
+      {clicked && <p className={currentStyle}>{props.hintText} </p>}
     </div>
   );
 }

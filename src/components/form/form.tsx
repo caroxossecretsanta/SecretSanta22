@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
 import './form.css';
+import { useNavigate } from 'react-router-dom';
 
-function Form() {
-  const [answer, setAnswer] = useState('');
+interface FormProps {
+  answer: string;
+}
+
+function Form(props: FormProps) {
+  const [value, setValue] = useState('');
   const [correct, setCorrect] = useState(false);
+  const navigate = useNavigate();
 
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
-    answer === 'see as i see' ? setCorrect(true) : setCorrect(false);
-    console.log(correct);
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    correct ? alert('CONGRATULATIONS.') : alert('TRY AGAIN,');
+    if (correct) navigate('/SecretSanta22/2');
+  };
+
+  const handleChange = (e: any) => {
+    setValue(e.target.value);
+    e.target.value === props.answer ? setCorrect(true) : setCorrect(false);
   };
 
   return (
@@ -18,7 +29,8 @@ function Form() {
           className="Form"
           type="text"
           placeholder="ANSWER HERE"
-          onChange={(e) => setAnswer(e.target.value)}
+          value={value}
+          onChange={handleChange}
         />
         <input type="submit" />
       </form>
