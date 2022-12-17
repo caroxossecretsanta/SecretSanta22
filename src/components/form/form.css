@@ -1,6 +1,7 @@
 .form-parent {
-  padding-top: 125px;
+  padding-top: 50px;
   text-align: center;
+  overflow: auto;
 }
 
 .word-counter {

@@ -1,9 +1,11 @@
-.hover-zoom {
+.hint-parent{
   padding-top: 30px;
-  width: 150px;
-  height: 100px;
-  overflow: visible;
+  text-align: center;
   margin: 0 auto;
+}
+
+.hover-zoom {
+  width: 150px;
 }
   
 .hover-zoom img {
@@ -39,3 +41,8 @@
     100% {opacity: 1; } 
     0% {opacity: 0; }
   } 
+
+.hint-image {
+  width: 750px;
+  height: 450px;
+}

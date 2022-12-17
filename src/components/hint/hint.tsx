@@ -5,6 +5,7 @@ import './hint.css';
 interface HintProps {
   imagePath: string;
   hintText: string;
+  hintImage?: string;
 }
 
 let currentStyle = 'fade-in-text';
@@ -17,14 +18,21 @@ function ImageButton(props: HintProps) {
   };
 
   return (
-    <div className="hover-zoom">
+    <div className="hint-parent">
       <img
-        src={props.imagePath}
-        alt="hii"
         className="hover-zoom"
+        src={props.imagePath}
+        alt="Hint"
         onClick={handleClick}
       />
       {clicked && <p className={currentStyle}>{props.hintText} </p>}
+      {clicked && props.hintImage && (
+        <img
+          className={currentStyle + ' hint-image'}
+          src={props.hintImage}
+          alt="Hint"
+        />
+      )}
     </div>
   );
 }
