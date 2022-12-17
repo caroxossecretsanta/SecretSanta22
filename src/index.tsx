@@ -1,20 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import SaveAsISave from './pages/save-as-i-save/save-as-i-save';
+import MeaningTape from './pages/meaning-tape/meaning-tape';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
+
+const FirstPuzzle = (
+  <SaveAsISave
+    imgPath="https://media.discordapp.net/attachments/825881406017241178/1052735396150247504/c2VlIGFzIGkgc2Vl.png"
+    vidPath="https://www.youtube.com/watch?v=oHASvG5amh8"
+    width="800px"
+    height="500px"
+  />
+);
+
+const SecondPuzzle = (
+  <MeaningTape
+    imgPath="https://media.discordapp.net/attachments/825881406017241178/1053673322900103279/102706.png"
+    vidPath="https://www.youtube.com/watch?v=mErQsM0vraU"
+    width="800px"
+    height="500px"
+  />
+);
+
 root.render(
   <React.StrictMode>
-    <SaveAsISave
-      imgPath="https://media.discordapp.net/attachments/825881406017241178/1052735396150247504/c2VlIGFzIGkgc2Vl.png"
-      vidPath="https://www.youtube.com/watch?v=oHASvG5amh8"
-      width="800px"
-      height="500px"
-    />
+    <BrowserRouter>
+      <Routes>
+        <Route path="SecretSanta22" element={FirstPuzzle} />
+        <Route path="SecretSanta22/2" element={SecondPuzzle} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
 );
 
