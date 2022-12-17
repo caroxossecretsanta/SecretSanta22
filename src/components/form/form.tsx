@@ -13,13 +13,15 @@ function Form(props: FormProps) {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    correct ? alert('CONGRATULATIONS.') : alert('TRY AGAIN,');
+    correct ? alert('CONGRATULATIONS.') : alert('TRY AGAIN.');
     if (correct) navigate('/SecretSanta22/2');
   };
 
   const handleChange = (e: any) => {
     setValue(e.target.value);
-    e.target.value === props.answer ? setCorrect(true) : setCorrect(false);
+    e.target.value.toLowerCase() === props.answer.toLowerCase()
+      ? setCorrect(true)
+      : setCorrect(false);
   };
 
   return (
@@ -33,6 +35,10 @@ function Form(props: FormProps) {
           onChange={handleChange}
         />
         <input type="submit" />
+        <text className="word-counter">
+          {value.length}/{props.answer.length}
+        </text>
+        <text />
       </form>
     </div>
   );

@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.word-counter {
+  color: red;
+}
+
 .Form {
   margin: 8px 0;
 }
