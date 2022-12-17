@@ -18,9 +18,10 @@ function MeaningTape(props: MeaningTapeProps) {
       <Video path={props.vidPath} width="700px" height="400px" />
       <Hint
         imagePath="https://media.discordapp.net/attachments/825881406017241178/1052735595601997924/hint.png"
-        hintText="Save Image As Google B64"
+        hintText="https://bit.ly/3hA3tas"
+        hintImage="https://media.discordapp.net/attachments/825881406017241178/1053713438129528892/understand_the_numbers.gif"
       />
-      <Form answer="placeholder" />
+      <Form answer="traumatic brain injury" />
     </div>
   );
 }

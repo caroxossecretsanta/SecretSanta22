@@ -19,16 +19,15 @@ function ImageButton(props: HintProps) {
 
   return (
     <div className="hint-parent">
-      <img
-        className="hover-zoom"
-        src={props.imagePath}
-        alt="Hint"
-        onClick={handleClick}
-      />
+      <div className="hover-zoom hint-parent">
+        <img src={props.imagePath} alt="Hint" onClick={handleClick} />
+      </div>
+
       {clicked && <p className={currentStyle}>{props.hintText} </p>}
       {clicked && props.hintImage && (
         <img
-          className={currentStyle + ' hint-image'}
+          // eslint-disable-next-line no-useless-concat
+          className={`${currentStyle} hint-image`}
           src={props.hintImage}
           alt="Hint"
         />

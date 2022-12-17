@@ -35,10 +35,9 @@ function Form(props: FormProps) {
           onChange={handleChange}
         />
         <input type="submit" />
-        <text className="word-counter">
+        <b className="word-counter">
           {value.length}/{props.answer.length}
-        </text>
-        <text />
+        </b>
       </form>
     </div>
   );

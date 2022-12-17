@@ -5,7 +5,9 @@
 }
 
 .word-counter {
+  padding-left: 5px;
   color: red;
+  font-family: 'Courier New', monospace;
 }
 
 .Form {

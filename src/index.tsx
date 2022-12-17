@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 const FirstPuzzle = (
   <SaveAsISave
     imgPath="https://media.discordapp.net/attachments/825881406017241178/1052735396150247504/c2VlIGFzIGkgc2Vl.png"
-    vidPath="https://www.youtube.com/watch?v=oHASvG5amh8"
+    vidPath="https://streamable.com/0vicre"
     width="800px"
     height="500px"
   />
@@ -22,7 +22,7 @@ const FirstPuzzle = (
 const SecondPuzzle = (
   <MeaningTape
     imgPath="https://media.discordapp.net/attachments/825881406017241178/1053673322900103279/102706.png"
-    vidPath="https://www.youtube.com/watch?v=mErQsM0vraU"
+    vidPath="https://streamable.com/0ug6j9"
     width="800px"
     height="500px"
   />
