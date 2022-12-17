@@ -16,8 +16,11 @@ function SaveAsISave(props: SaveAsISaveProps) {
     <div>
       <ImageHeader path={props.imgPath} />
       <Video path={props.vidPath} width="700px" height="400px" />
-      <Hint path="https://media.discordapp.net/attachments/825881406017241178/1052735595601997924/hint.png" />
-      <Form />
+      <Hint
+        imagePath="https://media.discordapp.net/attachments/825881406017241178/1052735595601997924/hint.png"
+        hintText="Save Image As Google B64"
+      />
+      <Form answer="see as i see" />
     </div>
   );
 }
