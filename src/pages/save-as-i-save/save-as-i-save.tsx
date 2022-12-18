@@ -3,6 +3,7 @@ import ImageHeader from '../../components/image-header/image-header';
 import Video from '../../components/video-player/video';
 import Hint from '../../components/hint/hint';
 import Form from '../../components/form/form';
+import './save-as-i-save.css';
 
 interface SaveAsISaveProps {
   imgPath: string;
@@ -19,8 +20,9 @@ function SaveAsISave(props: SaveAsISaveProps) {
       <Hint
         imagePath="https://media.discordapp.net/attachments/825881406017241178/1052735595601997924/hint.png"
         hintText="Save Image As Google B64"
+        hintStyle="hint-image"
       />
-      <Form answer="see as i see" />
+      <Form answer="see as i see" nextPage="/SecretSanta22/secondtrial" />
     </div>
   );
 }
