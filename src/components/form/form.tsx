@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 interface FormProps {
   answer: string;
+  nextPage: string;
 }
 
 function Form(props: FormProps) {
@@ -14,7 +15,7 @@ function Form(props: FormProps) {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     correct ? alert('CONGRATULATIONS.') : alert('TRY AGAIN.');
-    if (correct) navigate('/SecretSanta22/2');
+    if (correct) navigate(props.nextPage);
   };
 
   const handleChange = (e: any) => {

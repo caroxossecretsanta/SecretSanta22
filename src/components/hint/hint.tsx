@@ -6,6 +6,7 @@ interface HintProps {
   imagePath: string;
   hintText: string;
   hintImage?: string;
+  hintStyle: string;
 }
 
 let currentStyle = 'fade-in-text';
@@ -27,7 +28,7 @@ function ImageButton(props: HintProps) {
       {clicked && props.hintImage && (
         <img
           // eslint-disable-next-line no-useless-concat
-          className={`${currentStyle} hint-image`}
+          className={`${currentStyle} ${props.hintStyle}`}
           src={props.hintImage}
           alt="Hint"
         />

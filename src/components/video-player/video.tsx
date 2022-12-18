@@ -5,7 +5,7 @@ interface VideoProps {
   path: string;
   width: string;
   height: string;
-  click?: any;
+  click?: boolean;
 }
 
 function Video(props: VideoProps) {
