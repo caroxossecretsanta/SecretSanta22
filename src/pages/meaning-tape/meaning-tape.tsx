@@ -2,6 +2,7 @@ import ImageHeader from '../../components/image-header/image-header';
 import Video from '../../components/video-player/video';
 import Hint from '../../components/hint/hint';
 import Form from '../../components/form/form';
+import CheaterDetected from '../../components/cheater-detected/cheater-detected';
 import './meaning-tape.css';
 
 interface MeaningTapeProps {
@@ -9,10 +10,12 @@ interface MeaningTapeProps {
   vidPath: string;
   width: string;
   height: string;
+  clue: string;
 }
 
 function MeaningTape(props: MeaningTapeProps) {
-  return (
+  const cookie = localStorage.getItem('COMPLETED_PUZZLES');
+  return parseInt(cookie!) >= 1 ? (
     <div>
       <ImageHeader path={props.imgPath} />
       <Video path={props.vidPath} width="700px" height="400px" click={true} />
@@ -24,8 +27,14 @@ function MeaningTape(props: MeaningTapeProps) {
       />
       <Form
         answer="traumatic brain injury"
-        nextPage="/SecretSanta22/finalpuzzle"
+        nextPage="/SecretSanta22/2"
+        cookie="2"
+        clue={props.clue}
       />
+    </div>
+  ) : (
+    <div>
+      <CheaterDetected />
     </div>
   );
 }

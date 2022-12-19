@@ -10,9 +10,11 @@ interface SaveAsISaveProps {
   vidPath: string;
   width: string;
   height: string;
+  clue: string;
 }
 
 function SaveAsISave(props: SaveAsISaveProps) {
+  localStorage.setItem('COMPLETED_PUZZLES', '0');
   return (
     <div>
       <ImageHeader path={props.imgPath} />
@@ -22,7 +24,12 @@ function SaveAsISave(props: SaveAsISaveProps) {
         hintText="Save Image As Google B64"
         hintStyle="hint-image"
       />
-      <Form answer="see as i see" nextPage="/SecretSanta22/secondtrial" />
+      <Form
+        answer="see as i see"
+        nextPage="/SecretSanta22/1"
+        cookie="1"
+        clue={props.clue}
+      />
     </div>
   );
 }

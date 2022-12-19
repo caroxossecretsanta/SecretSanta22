@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 interface FormProps {
   answer: string;
   nextPage: string;
+  cookie: string;
+  clue: string;
 }
 
 function Form(props: FormProps) {
@@ -14,8 +16,11 @@ function Form(props: FormProps) {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    correct ? alert('CONGRATULATIONS.') : alert('TRY AGAIN.');
-    if (correct) navigate(props.nextPage);
+    correct ? alert(props.clue.toUpperCase()) : alert('TRY AGAIN.');
+    if (correct) {
+      localStorage.setItem('COMPLETED_PUZZLES', props.cookie);
+      navigate(props.nextPage);
+    }
   };
 
   const handleChange = (e: any) => {

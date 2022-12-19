@@ -1,0 +1,17 @@
+.cheater-image {
+  padding-top: 250px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.cheater-form {
+  padding-top: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}

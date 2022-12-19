@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import SaveAsISave from './pages/save-as-i-save/save-as-i-save';
 import MeaningTape from './pages/meaning-tape/meaning-tape';
 import FinalPiece from './pages/final-piece/final-piece';
+import CheaterDetected from './components/cheater-detected/cheater-detected';
+import FinalPage from './pages/final-page/final-page';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -17,6 +19,7 @@ const FirstPuzzle = (
     vidPath="https://streamable.com/0vicre"
     width="800px"
     height="500px"
+    clue="Why is six afraid of seven?"
   />
 );
 
@@ -26,6 +29,7 @@ const SecondPuzzle = (
     vidPath="https://streamable.com/0ug6j9"
     width="800px"
     height="500px"
+    clue="A bird in hand is worth 2 in the bush."
   />
 );
 
@@ -35,7 +39,12 @@ const ThirdPuzzle = (
     vidPath="https://streamable.com/sy49ec"
     width="800px"
     height="500px"
+    clue="2 birds with 1 stone"
   />
+);
+
+const FourthPuzzle = (
+  <FinalPage imgPath="https://media.discordapp.net/attachments/825881406017241178/1054486538609774742/1672c3d1ecf312666f04f759050bd55b.png" />
 );
 
 root.render(
@@ -43,8 +52,13 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="SecretSanta22" element={FirstPuzzle} />
-        <Route path="SecretSanta22/secondtrial" element={SecondPuzzle} />
-        <Route path="SecretSanta22/finalpuzzle" element={ThirdPuzzle} />
+        <Route path="SecretSanta22/1" element={SecondPuzzle} />
+        <Route path="SecretSanta22/2" element={ThirdPuzzle} />
+        <Route path="SecretSanta22/3" element={FourthPuzzle} />
+        <Route
+          path="SecretSanta22/cheaterdetected"
+          element={<CheaterDetected />}
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
