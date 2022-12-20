@@ -27,7 +27,7 @@ function MeaningTape(props: MeaningTapeProps) {
       />
       <Form
         answer="traumatic brain injury"
-        nextPage="/SecretSanta22/2"
+        nextPage="/SecretSanta22/3"
         cookie="2"
         clue={props.clue}
       />

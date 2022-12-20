@@ -27,7 +27,7 @@ function FinalPiece(props: FinalPieceProps) {
       />
       <Form
         answer="the final piece"
-        nextPage="/SecretSanta22/3"
+        nextPage="/SecretSanta22/4"
         cookie="3"
         clue={props.clue}
       />

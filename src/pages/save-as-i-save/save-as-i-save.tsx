@@ -27,7 +27,7 @@ function SaveAsISave(props: SaveAsISaveProps) {
       />
       <Form
         answer="see as i see"
-        nextPage="/SecretSanta22/1"
+        nextPage="/SecretSanta22/2"
         cookie="1"
         clue={props.clue}
       />

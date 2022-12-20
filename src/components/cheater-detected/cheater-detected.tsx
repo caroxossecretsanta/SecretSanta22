@@ -8,7 +8,7 @@ function CheaterDetected() {
     e.preventDefault();
 
     localStorage.setItem('COMPLETED_PUZZLES', '0');
-    navigate('/SecretSanta22');
+    navigate('/SecretSanta22/1');
   };
 
   return (
