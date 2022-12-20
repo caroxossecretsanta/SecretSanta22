@@ -35,7 +35,7 @@ function HomePage() {
       </div>
       <Countdown
         className="paragraph-text"
-        date={new Date('2022-12-22T17:00:00')}
+        date={new Date('2022-12-12T17:00:00')}
         daysInHours
         onComplete={handleCompletion}
       />
