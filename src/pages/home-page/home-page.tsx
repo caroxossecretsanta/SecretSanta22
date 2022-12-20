@@ -13,6 +13,11 @@ function HomePage() {
     navigate('/SecretSanta22/1');
   };
 
+  const handleSubmit2 = (e: any) => {
+    e.preventDefault();
+    alert('NICE TRY.');
+  };
+
   const handleCompletion = () => {
     setEnabled(true);
   };
@@ -39,12 +44,20 @@ function HomePage() {
         daysInHours
         onComplete={handleCompletion}
       />
-      <div className="cheater-form">
-        <form onSubmit={handleSubmit}>
-          <input type="submit" value="PROCEED" disabled={!enabled} />
-        </form>
-      </div>
-
+      {enabled && (
+        <div className="cheater-form">
+          <form onSubmit={handleSubmit}>
+            <input type="submit" value="PROCEED" disabled={!enabled} />
+          </form>
+        </div>
+      )}
+      {!enabled && (
+        <div className="cheater-form">
+          <form onSubmit={handleSubmit2}>
+            <input type="submit" value="PROCEED" disabled={!enabled} />
+          </form>
+        </div>
+      )}
       <p className="paragraph-text">
         Note: You'll need a PC to solve the puzzles!
       </p>
