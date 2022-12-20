@@ -4,6 +4,7 @@ import Video from '../../components/video-player/video';
 import Hint from '../../components/hint/hint';
 import Form from '../../components/form/form';
 import './save-as-i-save.css';
+import CheaterDetected from '../../components/cheater-detected/cheater-detected';
 
 interface SaveAsISaveProps {
   imgPath: string;
@@ -14,8 +15,8 @@ interface SaveAsISaveProps {
 }
 
 function SaveAsISave(props: SaveAsISaveProps) {
-  localStorage.setItem('COMPLETED_PUZZLES', '0');
-  return (
+  const cookie = localStorage.getItem('COMPLETED_PUZZLES');
+  return parseInt(cookie!) >= 0 ? (
     <div>
       <ImageHeader path={props.imgPath} />
       <Video path={props.vidPath} width="700px" height="400px" />
@@ -30,6 +31,10 @@ function SaveAsISave(props: SaveAsISaveProps) {
         cookie="1"
         clue={props.clue}
       />
+    </div>
+  ) : (
+    <div>
+      <CheaterDetected />
     </div>
   );
 }
