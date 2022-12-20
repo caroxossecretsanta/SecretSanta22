@@ -48,6 +48,9 @@ function HomePage() {
       <p className="paragraph-text">
         Note: You'll need a PC to solve the puzzles!
       </p>
+      <p className="paragraph-text">
+        Also - There's many ways you can cheat, but where's the fun in that? :)
+      </p>
     </>
   );
 }
