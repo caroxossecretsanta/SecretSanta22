@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/SecretSanta22/static/css/main.6716ca26.css",
-    "main.js": "/SecretSanta22/static/js/main.e7009dfa.js",
+    "main.css": "/SecretSanta22/static/css/main.3f7214ab.css",
+    "main.js": "/SecretSanta22/static/js/main.bac4096e.js",
     "static/js/27.60e043ff.chunk.js": "/SecretSanta22/static/js/27.60e043ff.chunk.js",
     "index.html": "/SecretSanta22/index.html"
   },
   "entrypoints": [
-    "static/css/main.6716ca26.css",
-    "static/js/main.e7009dfa.js"
+    "static/css/main.3f7214ab.css",
+    "static/js/main.bac4096e.js"
   ]
 }
