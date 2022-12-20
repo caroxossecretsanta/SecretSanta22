@@ -17,6 +17,10 @@ const root = ReactDOM.createRoot(
 
 const Prelude = <HomePage />;
 
+const MobileDetected = (
+  <p className="paragraph-text">Please visit this website on your pc :)</p>
+);
+
 const FirstPuzzle = !isMobile ? (
   <SaveAsISave
     imgPath="https://media.discordapp.net/attachments/825881406017241178/1052735396150247504/c2VlIGFzIGkgc2Vl.png"
@@ -26,7 +30,7 @@ const FirstPuzzle = !isMobile ? (
     clue="Why is six afraid of seven?"
   />
 ) : (
-  <p className="paragraph-text">Please visit this website on your pc :)</p>
+  MobileDetected
 );
 
 const SecondPuzzle = !isMobile ? (
@@ -38,7 +42,7 @@ const SecondPuzzle = !isMobile ? (
     clue="A bird in hand is worth 2 in the bush."
   />
 ) : (
-  <p className="paragraph-text">Please visit this website on your pc :)</p>
+  MobileDetected
 );
 
 const ThirdPuzzle = !isMobile ? (
@@ -50,13 +54,13 @@ const ThirdPuzzle = !isMobile ? (
     clue="2 birds with 1 stone"
   />
 ) : (
-  <p className="paragraph-text">Please visit this website on your pc :)</p>
+  MobileDetected
 );
 
 const FourthPuzzle = !isMobile ? (
   <FinalPage imgPath="https://media.discordapp.net/attachments/825881406017241178/1054486538609774742/1672c3d1ecf312666f04f759050bd55b.png" />
 ) : (
-  <p className="paragraph-text">Please visit this website on your pc :)</p>
+  MobileDetected
 );
 
 root.render(
