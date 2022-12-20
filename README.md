@@ -1,3 +1,5 @@
+#If any of you see this, cheating is a way to find the answer, but where's the fun in that? :)
+
 # Secret Santa 2022
 
 Small React app.
